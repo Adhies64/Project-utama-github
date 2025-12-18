@@ -1,0 +1,471 @@
+/* --- RESET & GENERAL --- */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+.layar-dalam {
+  width: 1000px;
+  margin: auto;
+}
+.layar-penuh {
+  width: 100%;
+}
+
+/* --- NAVIGATION --- */
+nav {
+  z-index: 1000;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 60px;
+  width: 100%;
+  transition: background-color 0.5s ease;
+}
+nav .logo {
+  float: left;
+  line-height: 55px;
+}
+nav .logo img {
+  vertical-align: middle;
+  width: 120px;
+}
+nav .menu {
+  float: right;
+  height: 60px;
+}
+nav .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav .menu ul li a {
+  color: #fff;
+  padding: 0px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav .menu ul li a:hover {
+  text-decoration: underline;
+}
+
+nav.putih {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav.putih .menu ul li a {
+  color: #333;
+}
+nav.putih .tombol-menu .garis {
+  background-color: #333;
+}
+
+.tombol-menu {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  display: none;
+}
+.tombol-menu .garis {
+  height: 3px;
+  background-color: #fff;
+}
+
+/* --- HEADER --- */
+header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+header img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+header .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+header .intro {
+  z-index: 3;
+  text-align: center;
+}
+header .intro h3 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+/* --- BUTTONS --- */
+.tombol {
+  background-color: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 4px;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.tombol:hover {
+  background-color: #e64a19;
+}
+
+/* --- SECTION GENERAL --- */
+section {
+  padding: 80px 0;
+}
+section h3 {
+  font-size: 30px;
+  text-align: center;
+}
+section h3::after {
+  content: "";
+  border-bottom: 5px solid #c86b85;
+  width: 52px;
+  display: block;
+  margin: 20px auto;
+}
+section.abuabu {
+  background-color: #f5f6f6;
+}
+
+/* --- FILOSOFI RASA (NEW) --- */
+.filosofi-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.filosofi-teks {
+  flex: 1;
+}
+.filosofi-teks h3 {
+  text-align: left;
+}
+.filosofi-teks h3::after {
+  margin: 20px 0;
+}
+.filosofi-teks .ringkasan {
+  text-align: left;
+  margin-left: 0;
+  color: #ff5722;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.poin-filosofi {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+.poin-filosofi li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+.poin-filosofi li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #c86b85;
+  font-weight: bold;
+}
+.filosofi-visual {
+  flex: 1;
+}
+.bingkai-foto {
+  position: relative;
+  z-index: 2;
+}
+.bingkai-foto img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 20px 20px 0px #f5f6f6;
+  transition: 0.4s;
+}
+.bingkai-foto:hover img {
+  transform: translateY(-10px);
+}
+
+/* --- SUPPORT & TEAM --- */
+.support,
+.tim {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.support div,
+.tim div {
+  text-align: center;
+  width: 30%;
+}
+.support img {
+  width: 50px;
+}
+.tim img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- GALLERY --- */
+section#gallery .layar-dalam {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.galeri-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.galeri-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.galeri-info {
+  padding: 20px;
+}
+
+/* --- QUOTE --- */
+section.quote {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("foto dan video/makan.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 120px 0;
+}
+
+/* --- BLOG --- */
+.blog {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.blog .area {
+  width: 48%;
+  background: #fff;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.blog .area .gambar {
+  width: 40%;
+  background-size: cover;
+  background-position: center;
+}
+.blog .area .text {
+  width: 60%;
+  padding: 20px;
+}
+
+/* --- PREMIUM FOOTER & FORM STYLE --- */
+footer {
+  background-color: #1a1a1a;
+  color: #efefef;
+  padding: 80px 0 30px;
+}
+footer .layar-dalam {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-box {
+  width: 22%;
+}
+
+.form-container-premium {
+  width: 40% !important;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.form-container-premium h5 {
+  color: #ff5722;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+.form-container-premium p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 25px;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+.input-field input,
+.input-field textarea {
+  width: 100%;
+  padding: 12px 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #444;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+.input-field label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.input-field input:focus ~ label,
+.input-field input:valid ~ label,
+.input-field textarea:focus ~ label,
+.input-field textarea:valid ~ label {
+  top: -15px;
+  left: 0;
+  color: #ff5722;
+  font-size: 12px;
+  font-weight: bold;
+}
+.input-field input:focus,
+.input-field textarea:focus {
+  border-bottom: 2px solid #ff5722;
+}
+
+.tombol-premium {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: 0.4s;
+}
+.tombol-premium:hover {
+  background: #e64a19;
+  box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 10px;
+}
+.footer-links li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-links li a:hover {
+  color: #ff5722;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+/* --- RESPONSIVE FIX --- */
+@media screen and (max-width: 991px) {
+  .layar-dalam {
+    width: 90%;
+  }
+  .filosofi-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .filosofi-teks h3,
+  .filosofi-teks .ringkasan {
+    text-align: center;
+  }
+  .filosofi-teks h3::after {
+    margin: 20px auto;
+  }
+  .poin-filosofi li {
+    padding-left: 0;
+  }
+  .poin-filosofi li::before {
+    display: none;
+  }
+
+  .footer-box {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+  .form-container-premium {
+    width: 100% !important;
+    order: -1;
+  }
+
+  .blog,
+  .support,
+  .tim {
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog .area,
+  .support div,
+  .tim div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tombol-menu {
+    display: flex;
+    z-index: 1001;
+  }
+  nav .menu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #222;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-box {
+    width: 100%;
+    text-align: center;
+  }
+  header .intro h3 {
+    font-size: 2em;
+  }
+}
